@@ -1,11 +1,16 @@
 import Slot2 from './slot2'; 
 import ReactDOM from 'react-dom';
+import styles from '../../../styles/slot2.module.css';
+
 class Slot2Component extends HTMLElement {
     constructor() {
         super();
         // Shadow DOM 생성
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.innerHTML = `<div id="slot2-root"></div>`;
+        const styleEl = document.createElement('style');
+      styleEl.textContent = styles;
+      this.shadowRoot.appendChild(styleEl);
+        this.shadowRoot.innerHTML += `<div id="slot2-root"></div>`;
       }
 
       renderReactComponent() {

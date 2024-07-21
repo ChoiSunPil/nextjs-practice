@@ -20,11 +20,27 @@ module.exports = {
 					    // ECMAScript 2015+와 React 코드를 변환하기 위한 프리셋
 					    }
 				    }
-		    }
+		    },
+
+            {
+                test: /\.css$/,
+                use: [
+                    //  'style-loader',
+                    // {loader: 'css-loader',
+                    //     options: {
+                    //         modules: {
+                    //           localIdentName: '[name]__[local]--[hash:base64:5]'
+                    //         },
+                    //         importLoaders: 1
+                    //       }
+                    // }, 'postcss-loader' // postcss-loader 추가
+					'raw-loader'
+                    ]
+              }
 	    ]
     },
 
 resolve: {
-	extensions: ['.js', '.jsx','.tsx'] // 확장자를 생략하고 모듈을 불러올 수 있게 함
+	extensions: ['.js', '.jsx','.tsx','.css'] // 확장자를 생략하고 모듈을 불러올 수 있게 함
 }
 };
