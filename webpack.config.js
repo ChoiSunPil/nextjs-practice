@@ -33,8 +33,9 @@ module.exports = {
                     //         },
                     //         importLoaders: 1
                     //       }
-                    // }, 'postcss-loader' // postcss-loader 추가
-					'raw-loader'
+                    // }
+					//, 'postcss-loader' // postcss-loader 추가
+					,'raw-loader'
                     ]
               }
 	    ]
